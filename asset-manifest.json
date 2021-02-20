@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Sambo-Academy-Ireland/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Sambo-Academy-Ireland/static/js/main.13b194cf.chunk.js",
-    "main.js.map": "/Sambo-Academy-Ireland/static/js/main.13b194cf.chunk.js.map",
+    "main.js": "/Sambo-Academy-Ireland/static/js/main.e396d354.chunk.js",
+    "main.js.map": "/Sambo-Academy-Ireland/static/js/main.e396d354.chunk.js.map",
     "runtime-main.js": "/Sambo-Academy-Ireland/static/js/runtime-main.6d10c29e.js",
     "runtime-main.js.map": "/Sambo-Academy-Ireland/static/js/runtime-main.6d10c29e.js.map",
     "static/css/2.21f29710.chunk.css": "/Sambo-Academy-Ireland/static/css/2.21f29710.chunk.css",
@@ -28,6 +28,6 @@
     "static/css/2.21f29710.chunk.css",
     "static/js/2.dbfbfc28.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.13b194cf.chunk.js"
+    "static/js/main.e396d354.chunk.js"
   ]
 }
