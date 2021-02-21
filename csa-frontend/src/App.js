@@ -22,7 +22,7 @@ function App() {
       <MuiThemeProvider theme={THEME}>
         <BrowserRouter>
           <Switch>
-            <Route exact path="/Sambo-Academy-Ireland " component={Homepage} />
+            <Route exact path="/Sambo-Academy-Ireland" component={Homepage} />
           </Switch>
         </BrowserRouter>
         </MuiThemeProvider>
