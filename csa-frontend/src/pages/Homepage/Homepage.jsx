@@ -24,7 +24,12 @@ const useStyles = makeStyles((theme) => ({
   // 1/2 of container
   halfContainer: {
     // margin: '40px 10px 0px 0px',
-    width: "50%"
+    width: "50%",
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      justifyContent: 'center',
+      padding: '0 5% 10%',
+    },
   },
   // 1/3 of container
   thirdContainer: {
@@ -72,8 +77,8 @@ const useStyles = makeStyles((theme) => ({
 
 const sectionOneTitle = 'Welcome To CSA'
 const sectionOneText = `Welcome to the official website of Combat Sambo Academy.
-Here you can find all the necessary information about the Sambo sport,
-the gym and its location, our team and values, class schedule, prices and much more.
+
+Here you can find all the necessary information about the Sambo sport, the gym and its location, our team and values, class schedule, prices and much more.
 
 The aim of CSA is to teach Discipline, Comradeship and Self-defense 
 while providing friendly competition through sport.`
