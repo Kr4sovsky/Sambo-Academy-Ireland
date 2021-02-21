@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
       // margin: "20px",
   },
   titleLogo: {
-        width: "920px",
+        width: '80vw',
         height: 115,
   },
 }))
