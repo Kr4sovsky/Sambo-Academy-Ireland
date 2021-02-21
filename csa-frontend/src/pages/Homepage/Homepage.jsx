@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import {
   Grid, Button, Typography, Dialog, DialogActions, DialogContent,
-  DialogContentText, DialogTitle, makeStyles
+  DialogContentText, DialogTitle, makeStyles, Card
 } from '@material-ui/core';
 import '../../App.css';
 import Header from '../../components/Header/Header';
-import {default as samboOne} from '../../assets/sambo_1.png';
-import {default as samboTwo} from '../../assets/sambo_2.png';
-import {default as map} from '../../assets/map.png';
-import {default as igIcon} from '../../assets/ig_icon.png'
-import {default as fbIcon} from '../../assets/fb_icon.png'
+import { default as samboOne } from '../../assets/sambo_1.png';
+import { default as samboTwo } from '../../assets/sambo_2.png';
+import { default as map } from '../../assets/map.png';
+import { default as igIcon } from '../../assets/ig_icon.png'
+import { default as fbIcon } from '../../assets/fb_icon.png'
 const useStyles = makeStyles((theme) => ({
   main: {
     margin: '30px 0px 0px 0px'
@@ -21,10 +21,21 @@ const useStyles = makeStyles((theme) => ({
   textSection: {
     // margin: 20
   },
+  fullContainer: {
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      padding: '0 8%',
+    },
+  },
   // 1/2 of container
   halfContainer: {
     // margin: '40px 10px 0px 0px',
-    width: "50%"
+    width: "50%",
+    [theme.breakpoints.down('sm')]: {
+      width: '100%',
+      justifyContent: 'center',
+      padding: '0 8% 10%',
+    },
   },
   // 1/3 of container
   thirdContainer: {
@@ -51,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
   img: {
     height: '100%',
     width: '80%',
+    [theme.breakpoints.down('sm')]: {
+      width: '60%',
+    },
   },
   mapImg: {
     marginTop: 30,
@@ -67,13 +81,28 @@ const useStyles = makeStyles((theme) => ({
     margin: "0px 20px 0px 20px",
     height: 30,
     width: 30,
+  },
+  cardSection: {
+    display: 'flex',
+    flexWrap: 'no-wrap',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
+  },
+  card: {
+    flex: 1,
+    padding: '0 1vw 2vw',
+    margin: '0 0.5vw',
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: '3%',
+    },
   }
 }))
 
 const sectionOneTitle = 'Welcome To CSA'
 const sectionOneText = `Welcome to the official website of Combat Sambo Academy.
-Here you can find all the necessary information about the Sambo sport,
-the gym and its location, our team and values, class schedule, prices and much more.
+
+Here you can find all the necessary information about the Sambo sport, the gym and its location, our team and values, class schedule, prices and much more.
 
 The aim of CSA is to teach Discipline, Comradeship and Self-defense 
 while providing friendly competition through sport.`
@@ -161,157 +190,164 @@ const Homepage = (props) => {
 
   return (
     <Grid container direction="row" justify="center" className={classes.main}>
-        <Header/>
-        <Grid container justify="flex-start" direction="row" id="content" className={classes.content}>
-          {/* SECTION 1 */}
-          <Grid container className={classes.section} id="section1-content">
-            <Grid container justify="flex-start" id="section1-left" className={classes.halfContainer}>
-                    <Typography variant="h4">{sectionOneTitle}</Typography>
-                    <Typography className={classes.text} align="justify" >{sectionOneText}</Typography>
-            </Grid>
-            <Grid container justify="center" id="section1-right" className={classes.halfContainer}>
-                    <img className={classes.img} alt={"sambo_1"} src={samboOne}></img>
-            </Grid>
-          </Grid>
-          {/* SECTION 2 */}
-          <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section2-content">
-                    <Typography variant="h4">{sectionTwoTitle}</Typography>
-                    <Typography className={classes.text} align="justify" >{sectionTwoText}</Typography>
-            </Grid>
-          </Grid>
-          {/* SECTION 3 */}
-          <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section3-content">
+      <Header />
+      <Grid container justify="flex-start" direction="row" id="content" className={classes.content}>
 
-                    <Typography variant="h4">{sectionThreeTitle}</Typography>
-                    <Grid container>
-                      <Typography className={classes.text} >Our vision is to promote:</Typography>
-                    </Grid>
-                    <Grid container justify="space-between">
-                      <Grid container className={classes.thirdContainer}>
-                        <Typography className={classes.text} align="justify" >{sectionThreeLeft}</Typography>
-                      </Grid>
-                      <Grid container className={classes.thirdContainer}>
-                        <Typography className={classes.text} align="justify" >{sectionThreeCenter}</Typography>
-                      </Grid>
-                      <Grid container className={classes.thirdContainer}>
-                        <Typography className={classes.text} align="justify" >{sectionThreeRight}</Typography>
-                      </Grid>
-                    </Grid>
-                    
-            </Grid>
+        {/* SECTION 1 - Welcome to  CSA*/}
+        <Grid container className={classes.section} id="section1-content">
+          <Grid container justify="flex-start" id="section1-left" className={classes.halfContainer}>
+            <Typography variant="h4">{sectionOneTitle}</Typography>
+            <Typography className={classes.text} align="justify" >{sectionOneText}</Typography>
           </Grid>
-          {/* SECTION 4 */}
-          <Grid container className={classes.section} id="section4-content">
-            <Grid container justify="flex-start" id="section4-right" className={classes.halfContainer}>
-                      <img className={classes.img}  alt={"sambo_2"} src={samboTwo}></img>
-            </Grid>
-            <Grid container justify="flex-start" id="section4-left" className={classes.halfContainer}>
-                      <Typography variant="h4">{sectionFourTitle}</Typography>
-                      <Typography className={classes.text} align="justify" >{sectionFourText}</Typography>
-            </Grid>    
+          <Grid container justify="center" id="section1-right" className={classes.halfContainer}>
+            <img className={classes.img} alt={"sambo_1"} src={samboOne}></img>
           </Grid>
-                  
+        </Grid>
+        {/* SECTION 2 - What is Sambo*/}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section2-content" className={classes.fullContainer}>
+            <Typography variant="h4">{sectionTwoTitle}</Typography>
+            <Typography className={classes.text} align="justify" >{sectionTwoText}</Typography>
+          </Grid>
+        </Grid>
 
-           {/* SECTION 5 */}
-           <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section5-content">
+        {/* SECTION 3 - Our Values*/}
+        <Grid container justify="flex-start" className={classes.section}>
+          <Grid container justify="flex-start" id="section3-content" className={classes.fullContainer}>   
+          <Typography variant="h4">{sectionThreeTitle}</Typography>       
+            <Grid container>
+            
+              <Typography className={classes.section} >Our vision is to promote:</Typography>
+            </Grid>
 
-                    <Typography variant="h4">{sectionFiveTitle}</Typography>
-                    <Grid container justify="space-between">
-                      <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >{sectionFiveLeft}</Typography>
-                      </Grid>
-                      <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >{sectionFiveCenter}</Typography>
-                      </Grid>
-                      <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >{sectionFiveRight}</Typography>
-                      </Grid>
-                    </Grid>
-                    
+            <Grid id="section2-content" className={classes.cardSection}>
+              <Card className={classes.card}>
+                <Typography variant="h6">FRIENDSHIP</Typography>
+                <Typography className={classes.text} align="justify" >{sectionThreeLeft}</Typography>
+              </Card>
+              <Card className={classes.card}>
+              <Typography variant="h6">SAFETY</Typography>
+                <Typography className={classes.text} align="justify" >{sectionThreeCenter}</Typography>
+              </Card>
+              <Card className={classes.card}>
+              <Typography variant="h6">SAMBO</Typography>
+                <Typography className={classes.text} align="justify" >{sectionThreeRight}</Typography>
+              </Card>
             </Grid>
-          </Grid>
-             {/* SECTION 6 */}
-          <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section6-content">
 
-                    <Typography variant="h4">{sectionSixTitle}</Typography>
-                    <Typography className={classes.text} align="justify" >{sectionSixText}</Typography>          
-            </Grid>
-          </Grid>
-           {/* SECTION 7 */}
-           <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section7-content">
 
-                    <Typography variant="h4">{"Pricing"}</Typography>
-                    <Grid container justify="space-between">
-                      <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >
-                        {adultPass}
-                        </Typography>
-                      </Grid>
-                      <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >
-                        {teenagerPass}
-                        </Typography>
-                      </Grid>
-                      <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >
-                        {kidsPass}
-                        </Typography>
-                      </Grid>
-                      <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
-                        <Typography className={classes.text} align="justify" >
-                        {familyPass}
-                        </Typography>
-                      </Grid>
-                    </Grid>
-                    
-            </Grid>
           </Grid>
-            {/* SECTION 8 */}
-            <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section3-content">
+        </Grid>
+        {/* SECTION 4 - Trainings*/}
+        <Grid container className={classes.section} id="section4-content">
+          <Grid container justify="flex-start" id="section4-right" className={classes.halfContainer}>
+            <img className={classes.img} alt={"sambo_2"} src={samboTwo}></img>
+          </Grid>
+          <Grid container justify="flex-start" id="section4-left" className={classes.halfContainer}>
+            <Typography variant="h4">{sectionFourTitle}</Typography>
+            <Typography className={classes.text} align="justify" >{sectionFourText}</Typography>
+          </Grid>
+        </Grid>
 
-                    <Typography variant="h4">{"Gym"}</Typography>
-                    <Grid container>
-                    <Grid container>
-                      <Typography className={classes.text} >{"Our gym is located at the heart <3 of Dublin city:"}</Typography>
-                      </Grid>
-                      <Grid container>
-                      <Typography className={classes.text} >Kings Street, Dublin 1</Typography>
-                      </Grid>
-                    </Grid>
-                    <Grid container justify="space-between">
-                      <Grid container>
-                      
-                      <img className={classes.mapImg} alt={"sambo_1"} src={map}></img>
-                      </Grid>
-                    </Grid>
-                    
+
+        {/* SECTION 5 - Our Team*/}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section5-content">
+
+            <Typography variant="h4">{sectionFiveTitle}</Typography>
+            <Grid container justify="space-between">
+              <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >{sectionFiveLeft}</Typography>
+              </Grid>
+              <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >{sectionFiveCenter}</Typography>
+              </Grid>
+              <Grid container className={`${classes.thirdContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >{sectionFiveRight}</Typography>
+              </Grid>
+            </Grid>
+
+          </Grid>
+        </Grid>
+        {/* SECTION 6 */}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section6-content" className={classes.fullContainer}>
+
+            <Typography variant="h4">{sectionSixTitle}</Typography>
+            <Typography className={classes.text} align="justify" >{sectionSixText}</Typography>
+          </Grid>
+        </Grid>
+        {/* SECTION 7 */}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section7-content">
+
+            <Typography variant="h4">{"Pricing"}</Typography>
+            <Grid container justify="space-between">
+              <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >
+                  {adultPass}
+                </Typography>
+              </Grid>
+              <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >
+                  {teenagerPass}
+                </Typography>
+              </Grid>
+              <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >
+                  {kidsPass}
+                </Typography>
+              </Grid>
+              <Grid container className={`${classes.fourthContainer} ${classes.blueContainer}`}>
+                <Typography className={classes.text} align="justify" >
+                  {familyPass}
+                </Typography>
+              </Grid>
+            </Grid>
+
+          </Grid>
+        </Grid>
+        {/* SECTION 8 */}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section3-content">
+
+            <Typography variant="h4">{"Gym"}</Typography>
+            <Grid container>
+              <Grid container>
+                <Typography className={classes.text} >{"Our gym is located at the heart ❤ of Dublin city:"}</Typography>
+              </Grid>
+              <Grid container>
+                <Typography className={classes.text} >Kings Street, Dublin 1</Typography>
+              </Grid>
+            </Grid>
+            <Grid container justify="space-between">
+              <Grid container>
+
+                <img className={classes.mapImg} alt={"sambo_1"} src={map}></img>
+              </Grid>
+            </Grid>
+
+          </Grid>
+        </Grid>
+        {/* SECTION 8 */}
+        <Grid container className={classes.section}>
+          <Grid container justify="flex-start" id="section6-content">
+            <Typography variant="h4">{"Contact"}</Typography>
+            <Grid container>
+              <Typography className={classes.text} align="justify" >{sectionEightText}</Typography>
             </Grid>
           </Grid>
-          {/* SECTION 8 */}
-          <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section6-content">
-                    <Typography variant="h4">{"Contact"}</Typography>
-                    <Grid container>
-                      <Typography className={classes.text} align="justify" >{sectionEightText}</Typography>          
-                    </Grid>
-            </Grid>
-          </Grid>
-          
-          
-      </Grid>      
+        </Grid>
+
+
+      </Grid>
       <Grid container justify="center" alignItems="center" className={classes.footer}>
 
-      <img className={classes.icon} alt={"fb_icon"} src={fbIcon}></img>
-      <Typography className={classes.textContrast}> Sambo Academy Ireland © 2021 </Typography>
-      <img className={classes.icon} alt={"ig_icon"} src={igIcon}></img>
+        <img className={classes.icon} alt={"fb_icon"} src={fbIcon}></img>
+        <Typography className={classes.textContrast}> Sambo Academy Ireland © 2021 </Typography>
+        <img className={classes.icon} alt={"ig_icon"} src={igIcon}></img>
       </Grid>
-          
+
     </Grid>
   );
 };
