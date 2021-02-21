@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import Homepage from './pages/Homepage/Homepage'
+import Homepage from './pages/Homepage/Homepage.jsx'
 import 'fontsource-roboto';
 // Material UI
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
