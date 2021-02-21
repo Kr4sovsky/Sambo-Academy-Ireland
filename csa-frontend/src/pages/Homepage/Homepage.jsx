@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import {
   Grid, Button, Typography, Dialog, DialogActions, DialogContent,
-  DialogContentText, DialogTitle, makeStyles
+  DialogContentText, DialogTitle, makeStyles,
 } from '@material-ui/core';
 import '../../App.css';
 import Header from '../../components/Header/Header';
@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
   textSection: {
     // margin: 20
   },
+  fullContainer: {
+    [theme.breakpoints.down('sm')]: {
+      justifyContent: 'center',
+      padding: '0 8%',
+    },
+  },
   // 1/2 of container
   halfContainer: {
     // margin: '40px 10px 0px 0px',
@@ -28,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down('sm')]: {
       width: '100%',
       justifyContent: 'center',
-      padding: '0 5% 10%',
+      padding: '0 8% 10%',
     },
   },
   // 1/3 of container
@@ -56,6 +62,9 @@ const useStyles = makeStyles((theme) => ({
   img: {
     height: '100%',
     width: '80%',
+    [theme.breakpoints.down('sm')]: {
+      width: '60%',
+    },
   },
   mapImg: {
     marginTop: 30,
@@ -180,7 +189,7 @@ const Homepage = (props) => {
           </Grid>
           {/* SECTION 2 */}
           <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section2-content">
+            <Grid container justify="flex-start" id="section2-content" className={classes.fullContainer}>
                     <Typography variant="h4">{sectionTwoTitle}</Typography>
                     <Typography className={classes.text} align="justify" >{sectionTwoText}</Typography>
             </Grid>
@@ -240,7 +249,7 @@ const Homepage = (props) => {
           </Grid>
              {/* SECTION 6 */}
           <Grid container className={classes.section}>
-            <Grid container justify="flex-start" id="section6-content">
+            <Grid container justify="flex-start" id="section6-content" className={classes.fullContainer}>
 
                     <Typography variant="h4">{sectionSixTitle}</Typography>
                     <Typography className={classes.text} align="justify" >{sectionSixText}</Typography>          

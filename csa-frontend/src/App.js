@@ -11,7 +11,7 @@ const THEME = createMuiTheme({
    "fontSize": 16,
    "fontWeightLight": 300,
    "fontWeightRegular": 400,
-   "fontWeightMedium": 500
+   "fontWeightMedium": 500,
   },
   breakpoints:{
     values: {
