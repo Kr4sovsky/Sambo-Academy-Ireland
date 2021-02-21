@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/Sambo-Academy-Ireland/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/Sambo-Academy-Ireland/static/js/main.7b779806.chunk.js",
-    "main.js.map": "/Sambo-Academy-Ireland/static/js/main.7b779806.chunk.js.map",
-    "runtime-main.js": "/Sambo-Academy-Ireland/static/js/runtime-main.6d10c29e.js",
-    "runtime-main.js.map": "/Sambo-Academy-Ireland/static/js/runtime-main.6d10c29e.js.map",
+    "main.js": "/Sambo-Academy-Ireland/static/js/main.e31711eb.chunk.js",
+    "main.js.map": "/Sambo-Academy-Ireland/static/js/main.e31711eb.chunk.js.map",
+    "runtime-main.js": "/Sambo-Academy-Ireland/static/js/runtime-main.ef943916.js",
+    "runtime-main.js.map": "/Sambo-Academy-Ireland/static/js/runtime-main.ef943916.js.map",
     "static/css/2.21f29710.chunk.css": "/Sambo-Academy-Ireland/static/css/2.21f29710.chunk.css",
-    "static/js/2.dbfbfc28.chunk.js": "/Sambo-Academy-Ireland/static/js/2.dbfbfc28.chunk.js",
-    "static/js/2.dbfbfc28.chunk.js.map": "/Sambo-Academy-Ireland/static/js/2.dbfbfc28.chunk.js.map",
-    "static/js/3.0fda1e5b.chunk.js": "/Sambo-Academy-Ireland/static/js/3.0fda1e5b.chunk.js",
-    "static/js/3.0fda1e5b.chunk.js.map": "/Sambo-Academy-Ireland/static/js/3.0fda1e5b.chunk.js.map",
+    "static/js/2.13b5bc16.chunk.js": "/Sambo-Academy-Ireland/static/js/2.13b5bc16.chunk.js",
+    "static/js/2.13b5bc16.chunk.js.map": "/Sambo-Academy-Ireland/static/js/2.13b5bc16.chunk.js.map",
+    "static/js/3.97e5ba2f.chunk.js": "/Sambo-Academy-Ireland/static/js/3.97e5ba2f.chunk.js",
+    "static/js/3.97e5ba2f.chunk.js.map": "/Sambo-Academy-Ireland/static/js/3.97e5ba2f.chunk.js.map",
     "index.html": "/Sambo-Academy-Ireland/index.html",
     "static/css/2.21f29710.chunk.css.map": "/Sambo-Academy-Ireland/static/css/2.21f29710.chunk.css.map",
     "static/css/main.8c8b27cf.chunk.css.map": "/Sambo-Academy-Ireland/static/css/main.8c8b27cf.chunk.css.map",
-    "static/js/2.dbfbfc28.chunk.js.LICENSE.txt": "/Sambo-Academy-Ireland/static/js/2.dbfbfc28.chunk.js.LICENSE.txt",
+    "static/js/2.13b5bc16.chunk.js.LICENSE.txt": "/Sambo-Academy-Ireland/static/js/2.13b5bc16.chunk.js.LICENSE.txt",
     "static/media/fb_icon.75aa372f.png": "/Sambo-Academy-Ireland/static/media/fb_icon.75aa372f.png",
     "static/media/ig_icon.46b1557e.png": "/Sambo-Academy-Ireland/static/media/ig_icon.46b1557e.png",
     "static/media/logo.81493182.svg": "/Sambo-Academy-Ireland/static/media/logo.81493182.svg",
@@ -24,10 +24,10 @@
     "static/media/title_logo.6cf9dc3d.svg": "/Sambo-Academy-Ireland/static/media/title_logo.6cf9dc3d.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6d10c29e.js",
+    "static/js/runtime-main.ef943916.js",
     "static/css/2.21f29710.chunk.css",
-    "static/js/2.dbfbfc28.chunk.js",
+    "static/js/2.13b5bc16.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.7b779806.chunk.js"
+    "static/js/main.e31711eb.chunk.js"
   ]
 }
