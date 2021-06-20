@@ -10,7 +10,7 @@
 
 # production
 /build
-CNAME
+CANME
 
 # misc
 .DS_Store
